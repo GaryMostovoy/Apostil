@@ -1,0 +1,210 @@
+.mobile {
+	display: flex;
+	flex-direction: column;
+	height: 100dvh;
+	min-height: 100svh;
+	overflow: hidden;
+	padding:20px 0px;
+}
+.mobile__container {
+	height:100%;
+	width:100%;
+	max-width:800px;
+	display:flex;
+	flex-direction:column;
+}
+.mobile__top {
+	background: #edf2ef;
+	padding:20px 15px;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+	gap:20px;
+	border-radius:10px;
+	margin-bottom:24px;
+	position:relative;
+}
+.mobile__top img {
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	margin:auto;
+	width:112px;
+	height:110px;
+	pointer-events:none;
+}
+.mobile__top h2,
+#popup-pay .popup__text h2 {
+	font-weight: 700;
+	font-size: 25px;
+	line-height: 120%;
+	text-align: center;
+	color: #004020;
+	font-family: Gilroy-Semibold;
+}
+.mobile__top p {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 100%;
+	text-align: center;
+	color: #000;
+	font-family: Gilroy-Semibold;
+}
+.mobile__content span,
+.mobile__buttons span{
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 70%;
+	color: #004020;
+	font-family: Gilroy-Semibold;
+	display:block;
+	margin-bottom:20px;
+}
+.mobile__items {
+	display:flex;
+	flex-direction:column;
+	gap:10px;
+	margin-bottom:20px;
+}
+.mobile__item {
+	display:flex;
+	align-items:center;
+	gap:10px;
+}
+.mobile__icon {
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	border-radius: 10px;
+	width: 47px;
+	height: 50px;
+	background: #004020; 
+	background: linear-gradient(155deg, rgba(15, 116, 24, 0) 0%, #0f7418 100%), #004020;
+}
+.mobile__icon img,
+.mobile__icon object{
+	width:24px;
+	height:24px;
+	object-fit:contain;
+}
+.mobile__item p {
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 100%;
+	color: #000;
+	font-family: Gilroy-Semibold;
+}
+.mobile__buttons {
+	flex:1 1 auto;
+}
+.mobile__button {
+	display:grid;
+	grid-template-columns:repeat(2, 1fr);
+	column-gap:20px;
+	row-gap:15px;
+}
+.mobile__button a,
+.mobile__button button,
+#popup-pay .popup__text a {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05);
+	border: 1px solid #004020;
+	border-radius: 6px;
+	height:50px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+.mobile__button a object,
+.mobile__button button object {
+	pointer-events:none
+}
+/* .mobile__bottom {
+	display:flex;
+	gap:20px;
+	align-items:center;
+	justify-content:space-between
+}
+.mobile__bottom a {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 100%;
+	color: #000;
+} */
+.popup_show ~ body,
+.popup_show {
+  visibility: visible;
+}
+#popup-pay {
+	background: linear-gradient(310deg, rgba(0, 64, 32, 0) 0%, rgba(0, 64, 32, 0.12) 100%), #edf2ef;
+}
+#popup-pay .popup__content {
+	max-width: 400px;
+    border-radius: 20px;
+}
+#popup-pay .popup__text {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+	gap:30px;
+}
+#popup-pay .popup__text a {
+	padding:5px 20px;
+}
+.cky-btn-revisit-wrapper {
+  display: none !important;
+}
+
+.flip-card {
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card.is-flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .flip-card-front object {
+  width: 100%;
+  height: auto;
+} */
+
+.flip-card-back {
+	transform: rotateY(180deg);
+	background: #ffffff;
+	padding: 10px;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	border-radius: 6px;
+}
+.flip-card-back span {
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 100%;
+	color: #000;
+	font-family: Gilroy-Semibold;
+	text-align:center;
+	margin:0;
+}
